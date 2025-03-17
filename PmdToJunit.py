@@ -47,6 +47,10 @@ for files in pmd_output_root.findall("{*}file"):
         classname="PMD analysis"
     )
 
+    for scannedFile in scannedFiles:
+        if scannedFile.endswith(str(files.get("name")).replace("./", "")):
+            scannedFiles.delete(str(files.get("name")).replace("./", ""))
+
     while files.findall("{*}violation") != []:
         currentViolation = files.find("{*}violation")
 
