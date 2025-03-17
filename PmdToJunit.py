@@ -25,7 +25,7 @@ def list_files_recursive(path='.'):
             list_files_recursive(full_path)
         else:
             if full_path.endswith((".java")): # Add custom file types here
-                scannedFiles.append(os.path.normpath(full_path.replace(sys.argv[2], "", 1)))
+                scannedFiles.append(full_path.replace(sys.argv[2], "", 1))
 
 list_files_recursive(sys.argv[2])
 
@@ -46,7 +46,6 @@ for files in pmd_output_root.findall("{*}file"):
         time="3.0e-05",
         classname="PMD analysis"
     )
-    scannedFiles.remove(os.path.normpath(str(files.get("name")).replace("\\", "/").replace("./", "")))
 
     while files.findall("{*}violation") != []:
         currentViolation = files.find("{*}violation")
