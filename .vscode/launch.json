@@ -13,7 +13,7 @@
       ],
       // Enable if you don't use `watch` mode.
       "preLaunchTask": "npm: build-debug",
-      "command": "node \"${workspaceFolder}/out/ssh_server_manager.js\"",
+      "command": "node \"${workspaceFolder}/out/PmdToJunit.js\" --source pmd-output.xml",
       "outFiles": [
         "${workspaceFolder}/**/*.js"
       ]

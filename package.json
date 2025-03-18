@@ -15,14 +15,16 @@
     "build-debug": "esbuild --bundle --platform=node --sourcemap --keep-names --format=cjs src/**/*.ts --outdir=out",
     "watch": "esbuild --bundle --platform=node --sourcemap --keep-names --watch --format=cjs src/**/*.ts --outdir=out",
     "lint": "eslint src --ext ts",
-    "exe": "node out/PmdToJunit.js"
+    "exe": "node out/PmdToJunit.js --source pmd-output.xml"
   },
   "devDependencies": {
     "@types/node": "^22.13.10",
     "@typescript-eslint/eslint-plugin": "^8.26.1",
     "@typescript-eslint/parser": "^8.26.1",
+    "commander": "^13.1.0",
     "esbuild": "^0.25.1",
     "eslint": "^9.22.0",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.2",
+    "xml-js": "^1.6.11"
   }
 }
