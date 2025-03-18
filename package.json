@@ -1,0 +1,28 @@
+{
+  "name": "pmd-to-junit-converter",
+  "version": "1.0.0",
+  "description": "This python script converts a XML output of a PMD command to a JUNIT XML format to be used with a CICD like in Gitlab.",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sespra.ch/BakxY/pmd-to-junit-converter.git"
+  },
+  "license": "MIT",
+  "author": "BakxY",
+  "type": "commonjs",
+  "main": "out/PmdToJunit.js",
+  "scripts": {
+    "build": "esbuild --bundle --platform=node --minify --format=cjs src/**/*.ts --outdir=out",
+    "build-debug": "esbuild --bundle --platform=node --sourcemap --keep-names --format=cjs src/**/*.ts --outdir=out",
+    "watch": "esbuild --bundle --platform=node --sourcemap --keep-names --watch --format=cjs src/**/*.ts --outdir=out",
+    "lint": "eslint src --ext ts",
+    "exe": "node out/PmdToJunit.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "@typescript-eslint/parser": "^8.26.1",
+    "esbuild": "^0.25.1",
+    "eslint": "^9.22.0",
+    "typescript": "^5.8.2"
+  }
+}
