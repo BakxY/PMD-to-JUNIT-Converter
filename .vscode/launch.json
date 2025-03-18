@@ -13,7 +13,7 @@
       ],
       // Enable if you don't use `watch` mode.
       "preLaunchTask": "npm: build-debug",
-      "command": "node \"${workspaceFolder}/out/PmdToJunit.js\" --source pmd-output.xml",
+      "command": "node \"${workspaceFolder}/out/PmdToJunit.js\" --source pmd-output.xml --path ../zhaw-et24-inf2/Java --output pmd-output-junit.xml",
       "outFiles": [
         "${workspaceFolder}/**/*.js"
       ]

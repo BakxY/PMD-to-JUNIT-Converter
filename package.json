@@ -15,7 +15,7 @@
     "build-debug": "esbuild --bundle --platform=node --sourcemap --keep-names --format=cjs src/**/*.ts --outdir=out",
     "watch": "esbuild --bundle --platform=node --sourcemap --keep-names --watch --format=cjs src/**/*.ts --outdir=out",
     "lint": "eslint src --ext ts",
-    "exe": "node out/PmdToJunit.js --source pmd-output.xml"
+    "exe": "node out/PmdToJunit.js --source pmd-output.xml --path ../zhaw-et24-inf2/Java --output pmd-output-junit.xml"
   },
   "devDependencies": {
     "@types/node": "^22.13.10",
