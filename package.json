@@ -26,5 +26,8 @@
     "eslint": "^9.22.0",
     "typescript": "^5.8.2",
     "xml-js": "^1.6.11"
+  },
+  "dependencies": {
+    "xmlbuilder": "^15.1.1"
   }
 }
